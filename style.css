@@ -1,6 +1,5 @@
 body{
-    background:fixed;
-    background-color:black;
+    background: linear-gradient(to right, #667eea, #764ba2);
     height: 100%;
     margin: 0;
     
@@ -15,29 +14,39 @@ body{
 #container{
     display:flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    /* justify-content:space-evenly; */
     align-items: center;
     background: white;
-    width: 400px;
-    height: 23rem;
+    width: 500px;
+    height: 25rem;
     border-radius: 25px;
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0 10px 10px 10px;
 }
 
+#title{
+    color: #002A5E;
+    align-self: center;
+    margin: 10px 0 10px 0;
+}
+
 #task1{
-    background-color:transparent;
+    background-color:grey;
     display: flex;
     flex-direction: row;
+    margin-top: 5px;
     justify-items: center;
     margin-left: 8%;
     margin-right: 8%;
     align-items: center;
     width: 84%;
+    height: 10%;
     padding-left: 20px;
     border-radius: 12.5rem;
+    margin: 20px 0 5px 0;
 }
+
 #task2{
     background-color:grey;
     display: flex;
@@ -47,8 +56,10 @@ body{
     margin-right: 8%;
     align-items: center;
     width: 84%;
+    height: 10%;
     padding-left: 20px;
     border-radius: 12.5rem;
+    margin: 5px 0 5px 0;
 }
 #task-title {
     margin-right: auto;
@@ -61,4 +72,62 @@ body{
     align-items: center;
     margin-right: 8%;
     /* Ensures checkbox stays at the end of the flex row */
+}
+#input{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    margin-left: 8%;
+    margin-right: 8%;
+    align-items: center;
+    width: 84%;
+    height:12.5%;
+    /* padding-left: 20px; */
+    border-radius: 12.5rem;
+}
+#search{
+    background-color: lightgrey;
+    width: 75%;
+    border-radius: 12.5rem;
+    border:none;
+    height: 100%;
+    margin-right: 6.25px;
+    /* marign-right: 10px; */
+}
+
+#search::placeholder{
+    margin-left: 15px;
+    color: black;
+}
+
+
+#search-btn{
+    color: #FFFFFF;
+    height: 100%;
+    border-radius: 12.5rem;
+    border-width: 0;
+    width:22.5%;
+    transition: all 0.3s ease-in-out;
+    font-family: "Dosis", sans-serif;
+    background-image: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 19px;
+    color: white;
+}
+
+#search-btn span{
+    overflow:hidden;
+}
+
+
+#search-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);;
+}
+
+#search-btn:active{
+    opacity: 0.5;
 }
