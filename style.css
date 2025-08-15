@@ -44,10 +44,10 @@ body{
     height: 10%;
     padding-left: 20px;
     border-radius: 12.5rem;
-    margin: 20px 0 5px 0;
+    margin: 5px 0 5px 0;
 }
 
-#task2{
+#task{
     background-color:grey;
     display: flex;
     flex-direction: row;
@@ -66,25 +66,20 @@ body{
     /* Ensures task title stays at the start of the flex row */
     align-self: center;
 }
-#checkbox {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    margin-right: 8%;
-    /* Ensures checkbox stays at the end of the flex row */
-}
+
 #input{
     display: flex;
     flex-direction: row;
     justify-items: center;
-    margin-left: 8%;
+    margin-left: 6%;
     margin-right: 8%;
     align-items: center;
-    width: 84%;
+    width: 86%;
     height:12.5%;
-    /* padding-left: 20px; */
     border-radius: 12.5rem;
+    margin-bottom: 15px;
 }
+
 #search{
     background-color: lightgrey;
     width: 75%;
@@ -92,13 +87,23 @@ body{
     border:none;
     height: 100%;
     margin-right: 6.25px;
+    padding-left: 20px;
     /* marign-right: 10px; */
 }
 
 #search::placeholder{
-    margin-left: 15px;
-    color: black;
+    color: #888;
+    font-size: 14px;
+    letter-spacing: 1px;
+    opacity: 1;
+    transition: color 0.3s ease;
 }
+
+#search:focus::placeholder{
+    color: transparent;
+    border-width: 0;
+}
+
 
 
 #search-btn{
@@ -130,4 +135,84 @@ body{
 
 #search-btn:active{
     opacity: 0.5;
+}
+
+
+/* .checkbox{
+
+} */
+/* Container for custom checkbox */
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 6%;
+    position: relative;
+    font-size: 1.6rem;
+    color: #222;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    height: 32px;
+}
+
+/* Hide the default checkbox */
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    z-index: 2;
+}
+
+/* Custom checkmark */
+#check {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    border: 2px solid #bdbdbd;
+    border-radius: 50%;
+    background: #fff;
+    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* Hover and focus effect */
+.checkbox:hover #check,
+.checkbox input:focus ~ #check {
+    border-color: #FE5945;
+    box-shadow: 0 0 0 4px rgba(254, 89, 69, 0.15);
+}
+
+/* Checked state */
+.checkbox input:checked ~ #check {
+    background: #FE5945;
+    border-color: transparent;
+}
+
+#check::before{
+    content: none;
+    border: transparent;
+    border-width: 0;
+    width: 0;
+    height: 0;
+}
+
+#check::after{
+    content:"";
+    position: absolute;
+    width: 5px;
+    height: 12px;
+    border: solid #fff;  /* border is the color of the checkmark once it has been clicked */
+    border-width: 0 3px 3px 0;
+    left: 7px;
+    top: 3px;
+    transform: rotate(45deg);
+}
+
+
+.checkbox input:focus ~ #check{
+    box-shadow: 0 0 0 4px rgb(255, 131, 107 , 0.3);
 }

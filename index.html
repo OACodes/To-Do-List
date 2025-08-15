@@ -6,6 +6,7 @@
     <title>TO-DO List</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/fontawesome.min.css">
 </head>
 <body>
     <div class="wrapper">
@@ -15,15 +16,21 @@
             </div>
             <div id="input">
                 <input type="text" id="search" placeholder="add a new task...">
-                <button id="search-btn">Add<span class="plus">+</span></button>
+                <button id="search-btn">Add<span class="plus"> +</span></button>
             </div>
-            <div id="task1">
+            <div id="task1" data-id="1">
                 <h1 id="task-title">TASK 1</h1>
-                <input type="checkbox" id="checkbox">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span id="check"></span>
+                </label>
             </div>
-            <div id="task2">
+            <div id="task" data-id="2">
                 <h1 id="task-title">TASK 2</h1>
-                <input type="checkbox" id="checkbox">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span id="check"></span>
+                </label>
             </div>
         </div>
     </div>
