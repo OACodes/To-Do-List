@@ -5,6 +5,10 @@ const cont = document.getElementById('container');
 let count = 2;
 function addTask(){
     const newTask = taskInput.value;
+    if (newTask.trim() === ""){
+        alert('task name is required!');
+        return;
+    }
     count += 1;
     localStorage.setItem(count, newTask);
 
@@ -50,7 +54,7 @@ document.addEventListener('change', function(event){
     if (event.target.type === "checkbox"){
         const task_div = event.target.closest("div");
         const id = task_div.getAttribute("data-id");
-        const task = task_div.id;
+        // const task = task_div.id;
 
         console.log(event.target);
         console.log(`Deleting task with ID: ${task_div} and ${id}`);
@@ -59,6 +63,7 @@ document.addEventListener('change', function(event){
             localStorage.removeItem(id, task_div.textContent) // remove from storage
             console.log(task_div.textContent);
             cont.removeChild(task_div);
+            alert(task_div.textContent + ' has been Completed');
         }, 2000);
     }
 });
