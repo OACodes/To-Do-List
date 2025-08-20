@@ -31,10 +31,17 @@ function addTask(){
     // checkbox.setAttribute('type', 'checkbox');
     console.log('checkbox created');
 
+    // delete adding & styling
+
+    const delBox = document.createElement('div');
+    delBox.className = 'delete-box';
+    delBox.innerHTML = '<button class="delete-btn">X</button>';
+
 
     cont.appendChild(displayTask);
     displayTask.appendChild(newTitle);
     displayTask.appendChild(checkbox);
+    displayTask.appendChild(delBox);
 
 }
 
@@ -67,3 +74,18 @@ document.addEventListener('change', function(event){
         }, 2000);
     }
 });
+
+const del = document.getElementsByClassName('delete-btn');
+
+document.addEventListener('click', function(event){
+    const task_div = event.target.closest("div");
+    const id = task_div.getAttribute("data-id");
+
+    setTimeout(() => {
+        localStorage.removeItem(id, task_div.parentNode.textContent);
+        cont.removeChild(task_div.parentNode);
+        alert(task_div.parentNode.textContent + " has been removed");
+
+    }, 2000);
+})
+
