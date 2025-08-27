@@ -36,9 +36,25 @@
                     <span id="check"></span>
                 </label>
                 <div class="delete-box">
-                    <button class="delete-btn">X</button>
+                    <button class="delete-btn" id="showAlert">X</button>
                 </div>
+            </div>
+        </div>
+        <div id="customAlert" class="alert-box">
+            <div class="alert-content">
+                <h2>DELETED!</h2>
+                <p> The task has been removed!</p>
+                <button id="confirmBtn">OK</button>
             </div>
         </div>
     </div>
 </html>
+
+<!--
+Key features to add:
+    - Homepage (unique UI design)
+    - Responsive design for the to-do list instead (Ex: too many task that you need to expand the length of the list)
+    - Completed tasks page (how long they took to complete and provide the ability to undo the change)
+    - Deleted Tasks page (can return any deleted task)
+    - add custom alert for when the complete/delete btn is clicked
+-->

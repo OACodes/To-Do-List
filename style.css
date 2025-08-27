@@ -113,6 +113,9 @@ body{
     border-width: 0;
 }
 
+#search:focus{
+    border: transparent;
+}
 
 
 #search-btn{
@@ -145,6 +148,7 @@ body{
 #search-btn:active{
     opacity: 0.5;
 }
+
 
 
 /* .checkbox{
@@ -263,5 +267,75 @@ body{
 }
 
 .delete-box:active{
+    opacity: 0.5;
+}
+
+/* alert css */
+#confirmBtn{
+    padding: 10px 20px;
+    background-color:#002A5E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#confirmBtn:hover{
+    background-color:#667eea;
+}
+
+.alert-box{
+    /* the alert whenc clicked will change display to flex */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.6); /* 0.6 opacity creates a blur with the background when the alert pops up */
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-content{
+    background-color: #d5e9ff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif
+}
+
+.alert-content h2{
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.alert-content p{
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.alert-content button{
+    padding: 20px;
+    background: #764ba2;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.alert-content button:hover{
+    transition: ease-in-out 0.3s;
+    box-shadow: 0 20px 30px -6px rgba(118, 75, 162, 0.5);
+    transform: translateY(-3px);
+
+}
+
+.alert-content button:active{
     opacity: 0.5;
 }
